@@ -1,3 +1,2 @@
 # YelpCamp
-A YelpClone for campsites. Second iteration, now with Angular2
-
+A YelpClone for campsites. [Second iteration]
