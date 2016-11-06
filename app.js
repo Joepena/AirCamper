@@ -1,10 +1,14 @@
-var express = require("express"),
-    app     = express(),
-    bodyParser = require("body-parser"),
-    mongoose = require("mongoose"),
-    Campground = require("./models/campground"),
-    seedDB    = require("./seeds"),
-    Comment   = require("./models/comment");
+var express        = require("express"),
+    app            = express(),
+    User           = require("./models/user"),
+    seedDB         = require("./seeds"),
+    mongoose       = require("mongoose"),
+    passport       = require("passport"),
+    bodyParser     = require("body-parser"),
+    Comment        = require("./models/comment"),
+    Campground     = require("./models/campground"),
+    LocalStrategey = require("passport-local");
+
 
 mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -12,6 +16,18 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/public"));
 seedDB();
 
+// PASSPORT CONFIG
+app.use(require("express-session")({
+//set in a config file later
+  secret: "Hello world",
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategey(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 app.get("/", function(req,res){
   res.render("landing");
@@ -92,6 +108,29 @@ app.post("/campgrounds/:id/comments",function(req,res){
         }
       });
     }
+  });
+});
+//=========================
+//AUTH ROUTES
+//=========================
+
+//register form
+app.get("/register",function(req,res){
+  res.render("register");
+});
+
+//signup logic
+
+app.post("/register",function(req,res){
+  var newUser = new User({username: req.body.username});
+  User.register(newUser,req.body.password,function(err,user){
+    if (err) {
+      console.log(err);
+      return res.render("register");
+    }
+    passport.authenticate("local")(req,req,function(){
+      res.redirect("/campgrounds");
+    });
   });
 });
 
