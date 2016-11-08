@@ -1,4 +1,4 @@
-# AirCamper ![campgroundLogo](/misc/campgroundIcon.png?raw=true| width=50)
+# AirCamper <img src="/misc/campgroundIcon.png" alt="alt text" width="50" height="50">
 ## (Formerly called YelpCamp)
 A platform for campground reservation and reviews for campsites. [Second iteration]
 
