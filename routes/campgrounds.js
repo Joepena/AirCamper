@@ -26,7 +26,7 @@ router.post("/",function(req,res){
       console.log(err);
     }
     else {
-      console.log(foundCampground);
+  
       res.redirect("/campgrounds");
     }
   });
