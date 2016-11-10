@@ -1,21 +1,21 @@
 {
-  "name": "yelpcamp",
+  "name": "aircamper",
   "version": "1.0.0",
-  "description": "A YelpClone for campsites",
+  "description": "A platform for campground reservations and reviews",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Joepena/YelpCamp.git"
+    "url": "git+https://github.com/Joepena/AirCamper.git"
   },
-  "author": "Joe",
+  "author": "Joe Pena",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Joepena/YelpCamp/issues"
+    "url": "https://github.com/Joepena/AirCamper/issues"
   },
-  "homepage": "https://github.com/Joepena/YelpCamp#readme",
+  "homepage": "https://github.com/Joepena/AirCamper#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "ejs": "^2.5.2",
