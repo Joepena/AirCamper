@@ -252,9 +252,17 @@ tlbearBlink.to(bearEyes, .2, {opacity: 0}, 4)
 tlbearBlink.to(bearEyes, .2, {opacity: 1})
 
 //jquery 
-// $(document).ready(function () {
-//     // Handler for .ready() called.
-//     $('html, body').animate({
-//         scrollTop: "150px"
-//     }, 'slow');
-// });
+$(".title")
+  .css('opacity', 0)
+  .slideDown(1100)
+  .animate(
+    { opacity: 1 },
+    { queue: false, duration: 1100 }
+  );
+  $(".title-icon")
+  .css('opacity', 0)
+  .slideDown(1100)
+  .animate(
+    { opacity: 1 },
+    { queue: false, duration: 1100 }
+  );
