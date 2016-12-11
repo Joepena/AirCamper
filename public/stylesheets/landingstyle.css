@@ -1,7 +1,21 @@
 body {
 	background: #70a5da;
 }
-
+.title {
+	font-family: 'Megrim', cursive;
+	font-size: 110px;
+	color: white;
+	text-align: center;
+	margin-left: 400px ;
+	padding: 0;
+	display:inline;
+	/*white-space: nowrap;*/
+}
+.title-icon {
+	display:inline;
+	padding-left: 15px;
+	text-align: center;
+}
 .container {
 	margin: 3em auto;
   display: inline-block;

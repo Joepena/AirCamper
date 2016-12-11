@@ -1,5 +1,4 @@
 # AirCamper <img src="/misc/campgroundIcon.png" alt="alt text" width="50" height="50">
-## (Formerly called YelpCamp)
 A platform for campground reservation and reviews for campsites. Inspired by Yelp and Airbnb. The application was modeled using RESTful Routing. Users can leave comments on campground listings and view their location on a map along with price per-night and star rating review system. Currently working on its second iteration.
 
 ##Implemented Using:
