@@ -250,3 +250,11 @@ tlbearAppear.to([bearFace, bearNose, bearEars, bearBrows], .5, {
 var tlbearBlink = new TimelineMax({repeat:-1});
 tlbearBlink.to(bearEyes, .2, {opacity: 0}, 4)
 tlbearBlink.to(bearEyes, .2, {opacity: 1})
+
+//jquery 
+// $(document).ready(function () {
+//     // Handler for .ready() called.
+//     $('html, body').animate({
+//         scrollTop: "150px"
+//     }, 'slow');
+// });
