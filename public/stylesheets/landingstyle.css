@@ -1,0 +1,16 @@
+body {
+	background: #70a5da;
+}
+
+.container {
+	margin: 3em auto;
+  display: inline-block;
+	position: relative;
+	width: 100em;
+}
+
+.container svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
